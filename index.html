@@ -402,16 +402,23 @@
           </p>
 
           <p>
-            Deficits are computed as
-            <strong>D<sub>x</sub><sup>(i)</sup> = max(0, T - X<sub>i</sub>)</strong>,
-            while weighted contributions are estimated using softmax-based
-            weighting.
+            For each figure, deficits are measured as
+            <strong>D<sub>x</sub><sup>(i)</sup> = max(0, T − X<sub>i</sub>)</strong>,
+            where <em>T</em> is a performance threshold and
+            <em>X<sub>i</sub></em> denotes memory, knowledge, or visual scores.
+            Memory-validation questions dynamically adjust task importance through
+            <strong>softmax-based weighting</strong>, enabling DMRA to distinguish true
+            memory failures from perception and knowledge limitations.
           </p>
 
           <p>
-            The remaining unexplained failure is attributed to relational
-            reasoning:
-            <strong>C<sub>rel</sub> = F - min(F, U)</strong>.
+            The weighted upstream contribution is computed as
+            <strong>R<sub>x</sub><sup>(i)</sup> = α<sub>i</sub>w<sub>x</sub><sup>(i)</sup>D<sub>x</sub><sup>(i)</sup></strong>,
+            while the remaining unexplained error is attributed to relational reasoning:
+            <strong>C<sub>rel</sub> = F − min(F, U)</strong>.
+            This decomposition provides a fine-grained explanation of whether failures
+            originate from perception, knowledge, memory, or the inability to connect
+            concepts across multiple figures.
           </p>
         </div>
       </div>
