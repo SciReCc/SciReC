@@ -1033,7 +1033,7 @@ var onMouseLeave = Symbol('onMouseLeave');
 
 var defaultOptions = {
 	autoplay: false,
-	autoplaySpeed: 3000
+	autoplaySpeed: 6000
 };
 
 var Autoplay = function (_EventEmitter) {
