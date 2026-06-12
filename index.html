@@ -381,43 +381,54 @@
 </section>
 <!-- End image carousel -->
 
-<!-- Paper abstract -->
+<!-- DMRA -->
 <section class="section hero is-light">
   <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">DMRA (Deficit-Based Multimodal Relational Analysis) </h2>
+
+    <h2 class="title is-3 has-text-centered">
+      DMRA (Deficit-Based Multimodal Relational Analysis)
+    </h2>
+
+    <div class="columns is-vcentered">
+
+      <!-- Text -->
+      <div class="column is-7">
         <div class="content has-text-justified">
-         <p class="content">
-      DMRA diagnoses why MLLMs fail on relational reasoning tasks by separating
-      <strong>upstream deficits</strong> (memory, knowledge, and visual understanding)
-      from <strong>cross-image relational reasoning errors</strong>. For each figure,
-      deficits are computed as
-      <span class="has-text-weight-semibold">D<sub>x</sub><sup>(i)</sup> = max(0, T - X<sub>i</sub>)</span>,
-      where <em>T</em> is a performance threshold and <em>X<sub>i</sub></em> represents
-      memory, knowledge, or visual scores.
-    </p>
+          <p>
+            DMRA diagnoses why MLLMs fail on relational reasoning tasks by
+            separating <strong>upstream deficits</strong> (memory, knowledge,
+            and visual understanding) from
+            <strong>cross-image relational reasoning errors</strong>.
+          </p>
 
-    <p class="content">
-      To account for the varying importance of each factor, DMRA assigns
-      <strong>softmax-based weights</strong> using memory-validation signals, producing
-      weighted contributions
-      <span class="has-text-weight-semibold">R<sub>x</sub><sup>(i)</sup> = α<sub>i</sub> w<sub>x</sub><sup>(i)</sup> D<sub>x</sub><sup>(i)</sup></span>.
-      The remaining unexplained failure is attributed to relational reasoning:
-      <span class="has-text-weight-semibold">C<sub>rel</sub> = F - min(F, U)</span>,
-      where <em>F</em> is the total failure and <em>U</em> is the aggregated upstream deficit.
-    </p>
+          <p>
+            Deficits are computed as
+            <strong>D<sub>x</sub><sup>(i)</sup> = max(0, T - X<sub>i</sub>)</strong>,
+            while weighted contributions are estimated using softmax-based
+            weighting.
+          </p>
 
-    <p class="content">
-      This decomposition provides a fine-grained explanation of whether errors arise from
-      perception, knowledge, memory, or the inability to integrate concepts across multiple figures.
-    </p>
+          <p>
+            The remaining unexplained failure is attributed to relational
+            reasoning:
+            <strong>C<sub>rel</sub> = F - min(F, U)</strong>.
+          </p>
         </div>
       </div>
+
+      <!-- Image -->
+      <div class="column is-5 has-text-centered">
+        <img
+          src="static/images/dmra.png"
+          alt="DMRA framework"
+          style="max-width:100%; height:auto;"
+        >
+      </div>
+
     </div>
   </div>
 </section>
-<!-- End paper abstract -->
+<!-- End -->
 
 
 
