@@ -381,20 +381,55 @@
 </section>
 <!-- End image carousel -->
 
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">DMRA (Deficit-Based Multimodal Relational Analysis) </h2>
+        <div class="content has-text-justified">
+         <p class="content">
+      DMRA diagnoses why MLLMs fail on relational reasoning tasks by separating
+      <strong>upstream deficits</strong> (memory, knowledge, and visual understanding)
+      from <strong>cross-image relational reasoning errors</strong>. For each figure,
+      deficits are computed as
+      <span class="has-text-weight-semibold">D<sub>x</sub><sup>(i)</sup> = max(0, T - X<sub>i</sub>)</span>,
+      where <em>T</em> is a performance threshold and <em>X<sub>i</sub></em> represents
+      memory, knowledge, or visual scores.
+    </p>
+
+    <p class="content">
+      To account for the varying importance of each factor, DMRA assigns
+      <strong>softmax-based weights</strong> using memory-validation signals, producing
+      weighted contributions
+      <span class="has-text-weight-semibold">R<sub>x</sub><sup>(i)</sup> = α<sub>i</sub> w<sub>x</sub><sup>(i)</sup> D<sub>x</sub><sup>(i)</sup></span>.
+      The remaining unexplained failure is attributed to relational reasoning:
+      <span class="has-text-weight-semibold">C<sub>rel</sub> = F - min(F, U)</span>,
+      where <em>F</em> is the total failure and <em>U</em> is the aggregated upstream deficit.
+    </p>
+
+    <p class="content">
+      This decomposition provides a fine-grained explanation of whether errors arise from
+      perception, knowledge, memory, or the inability to integrate concepts across multiple figures.
+    </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
 
 
 
-<!-- Youtube video -->
+<!--
 <section class="hero is-small is-light">
   <div class="hero-body">
     <div class="container">
-      <!-- Paper video. -->
       <h2 class="title is-3">Video Presentation</h2>
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
           
           <div class="publication-video">
-            <!-- TODO: Replace with your YouTube video ID -->
             <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
           </div>
         </div>
@@ -402,7 +437,7 @@
     </div>
   </div>
 </section>
-<!-- End youtube video -->
+-->
 
 <!-- Image carousel -->
 <section class="hero is-small">
